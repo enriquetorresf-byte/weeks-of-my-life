@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Weeks of My Life</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<h1>WEEKS OF MY LIFE</h1>
+<p class="quote">"If you can’t use a minute, you’ll waste an hour and a whole day and your whole life!"</p>
+<div class="calendar-container">
+<table id="calendar">
+<thead>
+<tr>
+<th>Year</th>
+<script>
+for (let w = 1; w <= 52; w++) {
+    const cls = [4,8,13,17,21,26,30,34,39,43,48].includes(w) ? 'month-line' : '';
+    document.write(`<th class='${cls}'>${w}</th>`);
+}
+</script>
+</tr>
+</thead>
+<tbody>
+<script>
+for (let y = 2000; y < 2100; y++) {
+    const rowClass = y % 10 === 0 ? 'decade' : '';
+    document.write(`<tr class='${rowClass}'><td class='year-label'>${y}</td>`);
+    for (let w = 1; w <= 52; w++) {
+        let id = `${y}-W${w}`;
+        const monthClass = [4,8,13,17,21,26,30,34,39,43,48].includes(w) ? 'month-line' : '';
+        document.write(`<td class='${monthClass}'><div id='${id}' class='circle'></div></td>`);
+    }
+    document.write('</tr>');
+}
+</script>
+</tbody>
+</table>
+</div>
+<button id="reset">Reset All</button>
+<script src="assets/script.js"></script>
+</body>
+</html>

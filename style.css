@@ -1,0 +1,14 @@
+
+body { font-family: Arial, sans-serif; margin: 0; padding: 0; text-align: center; }
+h1 { font-size: 32px; margin: 20px 0 10px; font-weight: bold; }
+p.quote { font-size: 16px; font-style: italic; margin-bottom: 20px; }
+.calendar-container { overflow: auto; width: 100%; height: 80vh; border: 10px solid black; box-sizing: border-box; }
+table { border-collapse: collapse; margin: auto; background: white; }
+th, td { text-align: center; padding: 4px; }
+th { font-weight: bold; font-size: 10px; color: #123c7d; }
+.year-label { font-weight: bold; font-size: 12px; padding-right: 8px; text-align: right; }
+.circle { width: 14px; height: 14px; border: 1px solid black; border-radius: 50%; display: inline-block; background: white; cursor: pointer; }
+.marked { background: #4CAF50 !important; }
+.decade { background: #f2f2f2; }
+.month-line { border-right: 1px solid #ccc; }
+#reset { margin: 15px; padding: 10px 20px; font-size: 14px; cursor: pointer; }
